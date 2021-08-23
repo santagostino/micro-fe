@@ -1,0 +1,56 @@
+{
+  "name": "wrapper-microfrontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Microfrontend wrapper as web component",
+  "repository": {
+    "type": "git",
+    "url": "https://git-codecommit.eu-west-1.amazonaws.com/v1/repos/wrapper-microfrontend"
+  },
+  "author": "Santagostino",
+  "main": "index.js",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "buildWebComponent": "vue-cli-service lint && npm run build -- --target wc --name micro-frontend src/App.vue --inline-vue",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@webcomponents/webcomponentsjs": "^2.5.0",
+    "babel-eslint": "^10.1.0",
+    "copy-webpack-plugin": "^5.1.2",
+    "eslint": "^7.27.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.2",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-vue": "^7.16.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
